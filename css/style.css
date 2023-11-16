@@ -8,3 +8,71 @@ body {
     background-color: #222;
     color: white;
 }
+
+/*************** 
+    MAIN ELEMENTS
+***************/
+
+.container { height: 30vh; }
+
+.item {
+    float: left;
+    width: 700px;
+    height: 300px;
+    position: relative;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: black;
+    font-weight: bold;
+    box-shadow: #222;
+}
+
+.thumbs {
+    float: left;
+    height: 300px;
+    background: #000;
+    position: relative;
+}
+
+.thumb {
+    height: calc((300px) / 3);
+    opacity: 0.5;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb.active {
+    border: 2px solid #ccc;
+    opacity: 1;
+}
+
+.prev, .next {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    z-index: 999;
+    color: black;
+}
+
+.next { bottom: 0; }
